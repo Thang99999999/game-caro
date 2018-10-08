@@ -54,7 +54,7 @@
             // 
             // PictureBoxAvatar
             // 
-            this.PictureBoxAvatar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PictureBoxAvatar.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxAvatar.BackgroundImage = global::GameCaro.Properties.Resources.th4A2MBMRK;
             this.PictureBoxAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PictureBoxAvatar.Location = new System.Drawing.Point(0, 0);
@@ -73,13 +73,13 @@
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Location = new System.Drawing.Point(13, 232);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(225, 214);
+            this.panel2.Size = new System.Drawing.Size(225, 233);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox2.Location = new System.Drawing.Point(88, 86);
+            this.pictureBox2.Location = new System.Drawing.Point(88, 99);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(112, 102);
             this.pictureBox2.TabIndex = 5;
@@ -87,16 +87,16 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(3, 165);
+            this.button3.Location = new System.Drawing.Point(3, 178);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Check";
+            this.button3.Text = "RecentMark";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 125);
+            this.button2.Location = new System.Drawing.Point(3, 138);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -105,7 +105,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 86);
+            this.button1.Location = new System.Drawing.Point(3, 99);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -114,7 +114,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(3, 49);
+            this.textBox2.Location = new System.Drawing.Point(3, 58);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(197, 20);
@@ -123,7 +123,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 14);
+            this.textBox1.Location = new System.Drawing.Point(3, 18);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(197, 20);
             this.textBox1.TabIndex = 0;
@@ -132,23 +132,22 @@
             // PanelChessBoard
             // 
             this.PanelChessBoard.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PanelChessBoard.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PanelChessBoard.Location = new System.Drawing.Point(245, 14);
+            this.PanelChessBoard.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelChessBoard.Location = new System.Drawing.Point(244, 12);
             this.PanelChessBoard.Name = "PanelChessBoard";
-            this.PanelChessBoard.Size = new System.Drawing.Size(580, 434);
+            this.PanelChessBoard.Size = new System.Drawing.Size(581, 474);
             this.PanelChessBoard.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 463);
+            this.ClientSize = new System.Drawing.Size(837, 531);
             this.Controls.Add(this.PanelChessBoard);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Game Caro";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAvatar)).EndInit();
             this.panel2.ResumeLayout(false);
