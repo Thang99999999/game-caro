@@ -31,17 +31,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.PictureBoxAvatar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBoxPlayer = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextBoxName = new System.Windows.Forms.TextBox();
             this.PanelChessBoard = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAvatar)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,25 +65,25 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.PictureBoxPlayer);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.TextBoxName);
             this.panel2.Location = new System.Drawing.Point(13, 232);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(225, 233);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox2
+            // PictureBoxPlayer
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox2.Location = new System.Drawing.Point(88, 99);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 102);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.PictureBoxPlayer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PictureBoxPlayer.Location = new System.Drawing.Point(88, 99);
+            this.PictureBoxPlayer.Name = "PictureBoxPlayer";
+            this.PictureBoxPlayer.Size = new System.Drawing.Size(112, 102);
+            this.PictureBoxPlayer.TabIndex = 5;
+            this.PictureBoxPlayer.TabStop = false;
             // 
             // button3
             // 
@@ -121,13 +121,14 @@
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "IP";
             // 
-            // textBox1
+            // TextBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Name";
+            this.TextBoxName.Location = new System.Drawing.Point(3, 18);
+            this.TextBoxName.Name = "TextBoxName";
+            this.TextBoxName.Size = new System.Drawing.Size(197, 20);
+            this.TextBoxName.TabIndex = 0;
+            this.TextBoxName.Text = "Name";
+            this.TextBoxName.TextChanged += new System.EventHandler(this.TextBoxName_TextChanged);
             // 
             // PanelChessBoard
             // 
@@ -152,7 +153,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAvatar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,12 +163,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PictureBoxAvatar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PictureBoxPlayer;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextBoxName;
         private System.Windows.Forms.Panel PanelChessBoard;
     }
 }

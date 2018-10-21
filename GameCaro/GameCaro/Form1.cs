@@ -18,8 +18,13 @@ namespace GameCaro
         public Form1()
         {
             InitializeComponent();
-            ChessBoard = new Manager(PanelChessBoard,textBox1,pictureBox2);
+            ChessBoard = new Manager(PanelChessBoard,TextBoxName,PictureBoxPlayer);
             ChessBoard.DrawPanelChessBoard();
+        }
+
+        private void TextBoxName_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

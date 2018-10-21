@@ -33,5 +33,9 @@ namespace GameCaro
             this.Mark = mark;
         }
 
+        public string ToString()
+        {
+            return name;
+        }
     }
 }

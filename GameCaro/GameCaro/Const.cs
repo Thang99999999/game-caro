@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //Lớp dùng để lưu những thông số cho bàn cờ, có thể dễ dàng chỉnh sửa
 namespace GameCaro
 {
-    class Const
+     public class Const
     {
         public static int ChessWidth = 25;
         public static int ChessHeight = 25;
