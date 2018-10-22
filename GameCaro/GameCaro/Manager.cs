@@ -77,15 +77,18 @@ namespace GameCaro
                 new Player("Player1",Image.FromFile(Application.StartupPath + "\\Resources\\Capture 02.PNG")),
                 new Player("Player2",Image.FromFile(Application.StartupPath + "\\Resources\\Capture.PNG"))
             };
-            CurrentPlayer = 0;
-
-            ChangePlayer();
+            
         }
         #endregion
 
         #region Methods
         public void DrawPanelChessBoard()
         {
+            
+            ChessBoard.Enabled = true;
+            ChessBoard.Controls.Clear();
+            CurrentPlayer = 0;
+            ChangePlayer();
             Matrix = new List<List<Button>>();
             Button oldButton = new Button() { Width = 0, Location = new Point(0, 0) };
             for (int i = 0; i < Const.ChessBoardHeight; i++)
