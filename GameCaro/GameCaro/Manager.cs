@@ -64,6 +64,28 @@ namespace GameCaro
         }
 
 
+        private Stack<InfoPlayer> playTimeLine;
+        public Stack<InfoPlayer> PlayTimeLine
+        {
+            get { return  playTimeLine; }
+            set { playTimeLine = value; }
+        }
+
+
+        private event EventHandler endedGame;
+        public event EventHandler EndedGame
+        {
+            add
+            {
+                endedGame += value;
+            }
+            remove
+            {
+                endedGame -= value;
+            }
+        }
+
+
         #endregion
 
         #region Initialize
@@ -77,7 +99,6 @@ namespace GameCaro
                 new Player("Player1",Image.FromFile(Application.StartupPath + "\\Resources\\Capture 02.PNG")),
                 new Player("Player2",Image.FromFile(Application.StartupPath + "\\Resources\\Capture.PNG"))
             };
-            
         }
         #endregion
 
@@ -87,8 +108,12 @@ namespace GameCaro
             
             ChessBoard.Enabled = true;
             ChessBoard.Controls.Clear();
+
+            PlayTimeLine = new Stack<InfoPlayer>();
+
             CurrentPlayer = 0;
             ChangePlayer();
+
             Matrix = new List<List<Button>>();
             Button oldButton = new Button() { Width = 0, Location = new Point(0, 0) };
             for (int i = 0; i < Const.ChessBoardHeight; i++)
@@ -104,6 +129,7 @@ namespace GameCaro
                         BackgroundImageLayout = ImageLayout.Stretch,
                         Tag = i.ToString()
                     };
+
                     button.Click += buttonclick;
 
                     ChessBoard.Controls.Add(button);
@@ -125,8 +151,12 @@ namespace GameCaro
                 return;
 
             Mark(button);
-           
-            if(IsEndGame(button))
+
+            PlayTimeLine.Push(new InfoPlayer(GetChess(button), CurrentPlayer));
+
+            CurrentPlayer = CurrentPlayer == 1 ? 0 : 1;
+
+            if (IsEndGame(button))
             {
                 EndGame();
                 ChessBoard.Enabled = false;
@@ -135,7 +165,32 @@ namespace GameCaro
             ChangePlayer();
         }
 
-        private void EndGame()
+        public bool Undo()
+        {
+            if (PlayTimeLine.Count <= 0)
+                return false;
+
+            InfoPlayer OldPoint = PlayTimeLine.Pop();
+            Button button = Matrix[OldPoint.Point.Y][OldPoint.Point.X];
+
+            button.BackgroundImage = null;
+
+            if(PlayTimeLine.Count<=0)
+            {
+                CurrentPlayer = 0;
+            }
+            else
+            {
+                OldPoint = PlayTimeLine.Peek();
+                CurrentPlayer = OldPoint.CurrentPlayer == 1 ? 0 : 1;    
+            }
+
+            ChangePlayer();
+
+            return true;
+        }
+
+        public void EndGame()
         {
             bool check = true;
             for(int i=0;i<Const.ChessBoardHeight;i++)
@@ -146,9 +201,11 @@ namespace GameCaro
                 }
             if (check == false)
                 MessageBox.Show(this.PlayerName.Text + " đã chiến thắng!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show("Hai người chơi hòa", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (endedGame != null)
+                endedGame(this, new EventArgs());
         }
 
         private bool IsEndGame(Button button)
@@ -164,6 +221,7 @@ namespace GameCaro
             Point point = new Point(row, col);
             return point;
         }
+
         private bool IsEndRow(Button button)
         {
             Point point = GetChess(button);
@@ -271,7 +329,6 @@ namespace GameCaro
             return CountTop + CountBottom == 5;
         }
  
-
         private bool IsEndSub(Button button)
         {
             Point point = GetChess(button);
@@ -312,10 +369,11 @@ namespace GameCaro
         }
 
 
+
+
         private void Mark(Button button)
         {
             button.BackgroundImage = Player[CurrentPlayer].Mark;
-            CurrentPlayer = CurrentPlayer == 1 ? 0 : 1;
 
         }
 

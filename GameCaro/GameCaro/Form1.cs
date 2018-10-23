@@ -19,30 +19,41 @@ namespace GameCaro
         {
             InitializeComponent();
             ChessBoard = new Manager(PanelChessBoard,TextBoxName,PictureBoxPlayer);
+            ChessBoard.EndedGame += ChessBoard_EndedGame;
             ChessBoard.DrawPanelChessBoard();
             NewGame();
         }
 
         void NewGame()
         {
+            UndoButton.Enabled = true;
+            undoToolStripMenuItem.Enabled = true;
             ChessBoard.DrawPanelChessBoard();
         }
+
+        void EndGame()
+        {
+            undoToolStripMenuItem.Enabled = false;
+            UndoButton.Enabled = false;
+        }
+
         void Undo()
         {
-
+            ChessBoard.Undo();
         }
         void Quit()
         {
             Application.Exit();
         }
-        private void TextBoxName_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+       
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NewGame();
+        }
+
+        private void ChessBoard_EndedGame(object sender, EventArgs e)
+        {
+            EndGame();
         }
 
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,8 +68,13 @@ namespace GameCaro
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("bạn có chắc chắn muốn thoát!!", "thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát!!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
                 e.Cancel = true;
+        }
+
+        private void UndoButton_Click(object sender, EventArgs e)
+        {
+            Undo();
         }
     }
 }
