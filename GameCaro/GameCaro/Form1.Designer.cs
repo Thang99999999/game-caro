@@ -34,8 +34,8 @@
             this.PictureBoxPlayer = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.UndoButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ButtonLan = new System.Windows.Forms.Button();
+            this.textBoxIP = new System.Windows.Forms.TextBox();
             this.TextBoxName = new System.Windows.Forms.TextBox();
             this.PanelChessBoard = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -74,8 +74,8 @@
             this.panel2.Controls.Add(this.PictureBoxPlayer);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.UndoButton);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.ButtonLan);
+            this.panel2.Controls.Add(this.textBoxIP);
             this.panel2.Controls.Add(this.TextBoxName);
             this.panel2.Location = new System.Drawing.Point(12, 275);
             this.panel2.Name = "panel2";
@@ -110,23 +110,24 @@
             this.UndoButton.UseVisualStyleBackColor = true;
             this.UndoButton.Click += new System.EventHandler(this.UndoButton_Click);
             // 
-            // button1
+            // ButtonLan
             // 
-            this.button1.Location = new System.Drawing.Point(3, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "LAN";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ButtonLan.Location = new System.Drawing.Point(3, 99);
+            this.ButtonLan.Name = "ButtonLan";
+            this.ButtonLan.Size = new System.Drawing.Size(75, 23);
+            this.ButtonLan.TabIndex = 2;
+            this.ButtonLan.Text = "LAN";
+            this.ButtonLan.UseVisualStyleBackColor = true;
+            this.ButtonLan.Click += new System.EventHandler(this.ButtonLan_Click);
             // 
-            // textBox2
+            // textBoxIP
             // 
-            this.textBox2.Location = new System.Drawing.Point(3, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "IP";
+            this.textBoxIP.Location = new System.Drawing.Point(3, 58);
+            this.textBoxIP.Name = "textBoxIP";
+            this.textBoxIP.ReadOnly = true;
+            this.textBoxIP.Size = new System.Drawing.Size(197, 20);
+            this.textBoxIP.TabIndex = 1;
+            this.textBoxIP.Text = "IP";
             // 
             // TextBoxName
             // 
@@ -202,6 +203,7 @@
             this.Name = "Form1";
             this.Text = "Game Caro";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAvatar)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -222,8 +224,8 @@
         private System.Windows.Forms.PictureBox PictureBoxPlayer;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button UndoButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button ButtonLan;
+        private System.Windows.Forms.TextBox textBoxIP;
         private System.Windows.Forms.TextBox TextBoxName;
         private System.Windows.Forms.Panel PanelChessBoard;
         private System.Windows.Forms.MenuStrip menuStrip1;
