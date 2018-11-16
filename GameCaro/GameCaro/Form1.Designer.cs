@@ -118,10 +118,6 @@
             this.ButtonLan.TabIndex = 2;
             this.ButtonLan.Text = "LAN";
             this.ButtonLan.UseVisualStyleBackColor = true;
-            this.ButtonLan.Click += new System.EventHandler(this.ButtonLan_Click);
-            // 
-            // textBoxIP
-            // 
             this.textBoxIP.Location = new System.Drawing.Point(3, 58);
             this.textBoxIP.Name = "textBoxIP";
             this.textBoxIP.ReadOnly = true;
@@ -203,7 +199,7 @@
             this.Name = "Form1";
             this.Text = "Game Caro";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Shown += new System.EventHandler(this.Form1_Shown);
+            
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAvatar)).EndInit();
             this.panel2.ResumeLayout(false);
