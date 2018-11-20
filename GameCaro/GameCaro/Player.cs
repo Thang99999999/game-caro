@@ -18,7 +18,7 @@ namespace GameCaro
             set { name = value; }
         }
 
-        
+
 
         private Image mark;
         public Image Mark

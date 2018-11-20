@@ -32,10 +32,7 @@
             this.PictureBoxAvatar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PictureBoxPlayer = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.UndoButton = new System.Windows.Forms.Button();
-            this.ButtonLan = new System.Windows.Forms.Button();
-            this.textBoxIP = new System.Windows.Forms.TextBox();
             this.TextBoxName = new System.Windows.Forms.TextBox();
             this.PanelChessBoard = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -43,6 +40,7 @@
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAvatar)).BeginInit();
             this.panel2.SuspendLayout();
@@ -71,11 +69,9 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.PictureBoxPlayer);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.UndoButton);
-            this.panel2.Controls.Add(this.ButtonLan);
-            this.panel2.Controls.Add(this.textBoxIP);
+            this.panel2.Controls.Add(this.PictureBoxPlayer);
             this.panel2.Controls.Add(this.TextBoxName);
             this.panel2.Location = new System.Drawing.Point(12, 275);
             this.panel2.Name = "panel2";
@@ -85,45 +81,22 @@
             // PictureBoxPlayer
             // 
             this.PictureBoxPlayer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PictureBoxPlayer.Location = new System.Drawing.Point(88, 99);
+            this.PictureBoxPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PictureBoxPlayer.Location = new System.Drawing.Point(57, 101);
             this.PictureBoxPlayer.Name = "PictureBoxPlayer";
-            this.PictureBoxPlayer.Size = new System.Drawing.Size(112, 102);
+            this.PictureBoxPlayer.Size = new System.Drawing.Size(106, 106);
             this.PictureBoxPlayer.TabIndex = 5;
             this.PictureBoxPlayer.TabStop = false;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(3, 178);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "RecentMark";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // UndoButton
             // 
-            this.UndoButton.Location = new System.Drawing.Point(3, 138);
+            this.UndoButton.Location = new System.Drawing.Point(3, 56);
             this.UndoButton.Name = "UndoButton";
-            this.UndoButton.Size = new System.Drawing.Size(75, 23);
+            this.UndoButton.Size = new System.Drawing.Size(74, 23);
             this.UndoButton.TabIndex = 3;
             this.UndoButton.Text = "Undo";
             this.UndoButton.UseVisualStyleBackColor = true;
             this.UndoButton.Click += new System.EventHandler(this.UndoButton_Click);
-            // 
-            // ButtonLan
-            // 
-            this.ButtonLan.Location = new System.Drawing.Point(3, 99);
-            this.ButtonLan.Name = "ButtonLan";
-            this.ButtonLan.Size = new System.Drawing.Size(75, 23);
-            this.ButtonLan.TabIndex = 2;
-            this.ButtonLan.Text = "LAN";
-            this.ButtonLan.UseVisualStyleBackColor = true;
-            this.textBoxIP.Location = new System.Drawing.Point(3, 58);
-            this.textBoxIP.Name = "textBoxIP";
-            this.textBoxIP.ReadOnly = true;
-            this.textBoxIP.Size = new System.Drawing.Size(197, 20);
-            this.textBoxIP.TabIndex = 1;
-            this.textBoxIP.Text = "IP";
             // 
             // TextBoxName
             // 
@@ -137,6 +110,7 @@
             // 
             this.PanelChessBoard.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PanelChessBoard.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelChessBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelChessBoard.Location = new System.Drawing.Point(244, 34);
             this.PanelChessBoard.Name = "PanelChessBoard";
             this.PanelChessBoard.Size = new System.Drawing.Size(581, 474);
@@ -186,6 +160,16 @@
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(98, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,7 +183,6 @@
             this.Name = "Form1";
             this.Text = "Game Caro";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAvatar)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -218,10 +201,7 @@
         private System.Windows.Forms.PictureBox PictureBoxAvatar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox PictureBoxPlayer;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button UndoButton;
-        private System.Windows.Forms.Button ButtonLan;
-        private System.Windows.Forms.TextBox textBoxIP;
         private System.Windows.Forms.TextBox TextBoxName;
         private System.Windows.Forms.Panel PanelChessBoard;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -229,6 +209,7 @@
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 
