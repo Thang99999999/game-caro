@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.PictureBoxAvatar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PictureBoxPlayer = new System.Windows.Forms.PictureBox();
             this.UndoButton = new System.Windows.Forms.Button();
+            this.PictureBoxPlayer = new System.Windows.Forms.PictureBox();
             this.TextBoxName = new System.Windows.Forms.TextBox();
             this.PanelChessBoard = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -40,7 +40,6 @@
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAvatar)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,7 +68,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.UndoButton);
             this.panel2.Controls.Add(this.PictureBoxPlayer);
             this.panel2.Controls.Add(this.TextBoxName);
@@ -77,16 +75,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(225, 233);
             this.panel2.TabIndex = 1;
-            // 
-            // PictureBoxPlayer
-            // 
-            this.PictureBoxPlayer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PictureBoxPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PictureBoxPlayer.Location = new System.Drawing.Point(57, 101);
-            this.PictureBoxPlayer.Name = "PictureBoxPlayer";
-            this.PictureBoxPlayer.Size = new System.Drawing.Size(106, 106);
-            this.PictureBoxPlayer.TabIndex = 5;
-            this.PictureBoxPlayer.TabStop = false;
             // 
             // UndoButton
             // 
@@ -97,6 +85,16 @@
             this.UndoButton.Text = "Undo";
             this.UndoButton.UseVisualStyleBackColor = true;
             this.UndoButton.Click += new System.EventHandler(this.UndoButton_Click);
+            // 
+            // PictureBoxPlayer
+            // 
+            this.PictureBoxPlayer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PictureBoxPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PictureBoxPlayer.Location = new System.Drawing.Point(57, 101);
+            this.PictureBoxPlayer.Name = "PictureBoxPlayer";
+            this.PictureBoxPlayer.Size = new System.Drawing.Size(106, 106);
+            this.PictureBoxPlayer.TabIndex = 5;
+            this.PictureBoxPlayer.TabStop = false;
             // 
             // TextBoxName
             // 
@@ -111,7 +109,7 @@
             this.PanelChessBoard.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PanelChessBoard.BackColor = System.Drawing.SystemColors.Control;
             this.PanelChessBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelChessBoard.Location = new System.Drawing.Point(244, 34);
+            this.PanelChessBoard.Location = new System.Drawing.Point(280, 32);
             this.PanelChessBoard.Name = "PanelChessBoard";
             this.PanelChessBoard.Size = new System.Drawing.Size(581, 474);
             this.PanelChessBoard.TabIndex = 2;
@@ -122,7 +120,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(837, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(873, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -160,21 +158,11 @@
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(98, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 531);
+            this.ClientSize = new System.Drawing.Size(873, 526);
             this.Controls.Add(this.PanelChessBoard);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -209,7 +197,6 @@
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
     }
 }
 
