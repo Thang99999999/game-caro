@@ -23,15 +23,16 @@ namespace GameCaro
             ChessBoard = new Manager(PanelChessBoard,TextBoxName,PictureBoxPlayer);
             ChessBoard.EndedGame += ChessBoard_EndedGame;
             ChessBoard.DrawPanelChessBoard();
-            
+
             NewGame();
         }
 
         void NewGame()
         {
-            UndoButton.Enabled = true;
-            undoToolStripMenuItem.Enabled = true;
-            ChessBoard.DrawPanelChessBoard();
+                UndoButton.Enabled = true;
+                undoToolStripMenuItem.Enabled = true;
+                ChessBoard.DrawPanelChessBoard();
+            
         }
 
         void EndGame()
@@ -48,10 +49,14 @@ namespace GameCaro
         {
             Application.Exit();
         }
-       
+
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewGame();
+            if (undoToolStripMenuItem.Enabled == false || (MessageBox.Show("Bạn có muốn tạo bàn cờ mới?", "Thông báo!", 
+                MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)  )
+            { 
+               NewGame();
+            }
         }
 
         private void ChessBoard_EndedGame(object sender, EventArgs e)
@@ -78,11 +83,6 @@ namespace GameCaro
         private void UndoButton_Click(object sender, EventArgs e)
         {
             Undo();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

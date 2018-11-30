@@ -168,16 +168,19 @@ namespace GameCaro
         public bool Undo()
         {
             if (PlayTimeLine.Count <= 0)
+            {
+                MessageBox.Show("Bàn cờ chưa được đi!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
+            }
 
             InfoPlayer OldPoint = PlayTimeLine.Pop();
             Button button = Matrix[OldPoint.Point.Y][OldPoint.Point.X];
 
             button.BackgroundImage = null;
-
-            if(PlayTimeLine.Count<=0)
-            {
-                CurrentPlayer = 0;
+            
+            if (PlayTimeLine.Count == 0)
+            {                    
+                 CurrentPlayer = 0;
             }
             else
             {

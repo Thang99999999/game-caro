@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.PictureBoxAvatar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.UndoButton = new System.Windows.Forms.Button();
             this.PictureBoxPlayer = new System.Windows.Forms.PictureBox();
             this.TextBoxName = new System.Windows.Forms.TextBox();
@@ -57,7 +59,7 @@
             // 
             // PictureBoxAvatar
             // 
-            this.PictureBoxAvatar.BackColor = System.Drawing.SystemColors.Control;
+            this.PictureBoxAvatar.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.PictureBoxAvatar.BackgroundImage = global::GameCaro.Properties.Resources.th4A2MBMRK;
             this.PictureBoxAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PictureBoxAvatar.Location = new System.Drawing.Point(0, 0);
@@ -68,39 +70,56 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.UndoButton);
             this.panel2.Controls.Add(this.PictureBoxPlayer);
             this.panel2.Controls.Add(this.TextBoxName);
             this.panel2.Location = new System.Drawing.Point(12, 275);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(225, 233);
+            this.panel2.Size = new System.Drawing.Size(225, 140);
             this.panel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(157, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Undo";
             // 
             // UndoButton
             // 
-            this.UndoButton.Location = new System.Drawing.Point(3, 56);
+            this.UndoButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.UndoButton.BackgroundImage = global::GameCaro.Properties.Resources.UndoImage;
+            this.UndoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UndoButton.Location = new System.Drawing.Point(141, 33);
             this.UndoButton.Name = "UndoButton";
-            this.UndoButton.Size = new System.Drawing.Size(74, 23);
+            this.UndoButton.Size = new System.Drawing.Size(66, 50);
             this.UndoButton.TabIndex = 3;
-            this.UndoButton.Text = "Undo";
-            this.UndoButton.UseVisualStyleBackColor = true;
+            this.UndoButton.UseVisualStyleBackColor = false;
             this.UndoButton.Click += new System.EventHandler(this.UndoButton_Click);
             // 
             // PictureBoxPlayer
             // 
             this.PictureBoxPlayer.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.PictureBoxPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PictureBoxPlayer.Location = new System.Drawing.Point(57, 101);
+            this.PictureBoxPlayer.Location = new System.Drawing.Point(3, 33);
             this.PictureBoxPlayer.Name = "PictureBoxPlayer";
-            this.PictureBoxPlayer.Size = new System.Drawing.Size(106, 106);
+            this.PictureBoxPlayer.Size = new System.Drawing.Size(105, 104);
             this.PictureBoxPlayer.TabIndex = 5;
             this.PictureBoxPlayer.TabStop = false;
             // 
             // TextBoxName
             // 
-            this.TextBoxName.Location = new System.Drawing.Point(3, 18);
+            this.TextBoxName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.TextBoxName.Location = new System.Drawing.Point(3, 3);
             this.TextBoxName.Name = "TextBoxName";
-            this.TextBoxName.Size = new System.Drawing.Size(197, 20);
+            this.TextBoxName.ReadOnly = true;
+            this.TextBoxName.Size = new System.Drawing.Size(68, 20);
             this.TextBoxName.TabIndex = 0;
             this.TextBoxName.Text = "Name";
             // 
@@ -108,10 +127,13 @@
             // 
             this.PanelChessBoard.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PanelChessBoard.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelChessBoard.BackgroundImage = global::GameCaro.Properties.Resources.BackgroundBoard;
             this.PanelChessBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelChessBoard.Location = new System.Drawing.Point(280, 32);
+            this.PanelChessBoard.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelChessBoard.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.PanelChessBoard.Location = new System.Drawing.Point(278, 32);
             this.PanelChessBoard.Name = "PanelChessBoard";
-            this.PanelChessBoard.Size = new System.Drawing.Size(581, 474);
+            this.PanelChessBoard.Size = new System.Drawing.Size(575, 475);
             this.PanelChessBoard.TabIndex = 2;
             // 
             // menuStrip1
@@ -162,11 +184,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(873, 526);
             this.Controls.Add(this.PanelChessBoard);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Game Caro";
@@ -197,6 +222,7 @@
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }
 

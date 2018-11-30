@@ -12,6 +12,6 @@ namespace GameCaro
         public static int ChessHeight = 25;
 
         public static int ChessBoardWidth = 24;
-        public static int ChessBoardHeight = 20;
+        public static int ChessBoardHeight = 19;
     }
 }
