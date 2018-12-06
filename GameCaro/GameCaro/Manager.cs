@@ -64,8 +64,8 @@ namespace GameCaro
         }
 
 
-        private Stack<InfoPlayer> playTimeLine;
-        public Stack<InfoPlayer> PlayTimeLine
+        private StackCaro<InfoPlayer> playTimeLine;
+        public StackCaro<InfoPlayer> PlayTimeLine
         {
             get { return  playTimeLine; }
             set { playTimeLine = value; }
@@ -109,7 +109,7 @@ namespace GameCaro
             ChessBoard.Enabled = true;
             ChessBoard.Controls.Clear();
 
-            PlayTimeLine = new Stack<InfoPlayer>();
+            PlayTimeLine = new StackCaro<InfoPlayer>();
 
             CurrentPlayer = 0;
             ChangePlayer();
@@ -184,7 +184,7 @@ namespace GameCaro
             }
             else
             {
-                OldPoint = PlayTimeLine.Peek();
+                OldPoint = PlayTimeLine.Top();
                 CurrentPlayer = OldPoint.CurrentPlayer == 1 ? 0 : 1;    
             }
 
