@@ -48,3 +48,6 @@ C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.cspr
 C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.CoreCompileInputs.cache
 C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.exe
 C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.pdb
+C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Background.resources
+C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Rule.resources
+C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Size.resources

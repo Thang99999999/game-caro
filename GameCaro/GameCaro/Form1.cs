@@ -22,9 +22,16 @@ namespace GameCaro
             InitializeComponent();
             ChessBoard = new Manager(PanelChessBoard,TextBoxName,PictureBoxPlayer);
             ChessBoard.EndedGame += ChessBoard_EndedGame;
+            ChessBoard.SizePanel();
+            ChessBoard.LocationPanel();
             ChessBoard.DrawPanelChessBoard();
 
             NewGame();
+
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(NewGameButton, "Ctrl+A");
+            tip.SetToolTip(QuitButton, "Ctrl+Q");
+            tip.SetToolTip(UndoButton, "Ctrl+U");
         }
 
         void NewGame()
@@ -76,13 +83,55 @@ namespace GameCaro
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn muốn thoát!!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (sizeBoardToolStripMenuItem.Enabled == false)
+            {
+                e.Cancel = false;
+            }
+            else if (MessageBox.Show("Bạn có chắc chắn muốn thoát!!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
                 e.Cancel = true;
+            }
         }
 
         private void UndoButton_Click(object sender, EventArgs e)
         {
             Undo();
         }
+
+        private void Rule_Click(object sender, EventArgs e)
+        {
+            Form b = new Rule();
+            b.ShowDialog();
+            this.Show();
+        }
+
+        private void NewGameButton_Click(object sender, EventArgs e)
+        {
+            if (undoToolStripMenuItem.Enabled == false || (MessageBox.Show("Bạn có muốn tạo bàn cờ mới?", "Thông báo!",
+              MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK))
+            {
+                NewGame();
+            }
+        }
+
+        private void QuitButton_Click(object sender, EventArgs e)
+        {
+            Quit();
+        }
+
+        private void sizeBoardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Thoát bàn cờ hiện tại!", "Thông báo", MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                sizeBoardToolStripMenuItem.Enabled = false;
+                Form c = new Size();
+                this.Hide();
+                c.ShowDialog();
+                this.Show();
+                Application.Exit();
+            }
+        }
+
     }
 }
