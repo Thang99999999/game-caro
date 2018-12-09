@@ -41,13 +41,13 @@
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sizeBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PanelChessBoard = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PictureBoxAvatar = new System.Windows.Forms.PictureBox();
             this.Rule = new System.Windows.Forms.Button();
             this.NewGameButton = new System.Windows.Forms.Button();
             this.QuitButton = new System.Windows.Forms.Button();
             this.toolTipNG = new System.Windows.Forms.ToolTip(this.components);
+            this.PanelChessBoard = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPlayer)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -57,6 +57,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.UndoButton);
             this.panel2.Controls.Add(this.PictureBoxPlayer);
@@ -71,18 +72,20 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(157, 106);
+            this.label1.Font = new System.Drawing.Font("Broadway", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(155, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 15);
+            this.label1.Size = new System.Drawing.Size(42, 14);
             this.label1.TabIndex = 6;
             this.label1.Text = "Undo";
             // 
             // UndoButton
             // 
-            this.UndoButton.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.UndoButton.BackgroundImage = global::GameCaro.Properties.Resources.UndoImage;
+            this.UndoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.UndoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UndoButton.BackgroundImage")));
             this.UndoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UndoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UndoButton.Location = new System.Drawing.Point(141, 53);
             this.UndoButton.Name = "UndoButton";
             this.UndoButton.Size = new System.Drawing.Size(66, 50);
@@ -92,7 +95,7 @@
             // 
             // PictureBoxPlayer
             // 
-            this.PictureBoxPlayer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PictureBoxPlayer.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PictureBoxPlayer.Location = new System.Drawing.Point(3, 33);
             this.PictureBoxPlayer.Name = "PictureBoxPlayer";
@@ -102,11 +105,13 @@
             // 
             // TextBoxName
             // 
-            this.TextBoxName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.TextBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TextBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.TextBoxName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TextBoxName.Location = new System.Drawing.Point(26, 7);
             this.TextBoxName.Name = "TextBoxName";
             this.TextBoxName.ReadOnly = true;
-            this.TextBoxName.Size = new System.Drawing.Size(68, 20);
+            this.TextBoxName.Size = new System.Drawing.Size(68, 22);
             this.TextBoxName.TabIndex = 0;
             this.TextBoxName.Text = "Name";
             // 
@@ -162,6 +167,74 @@
             this.sizeBoardToolStripMenuItem.Text = "SizeBoard          Ctrl+S";
             this.sizeBoardToolStripMenuItem.Click += new System.EventHandler(this.sizeBoardToolStripMenuItem_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.PictureBoxAvatar);
+            this.panel1.Location = new System.Drawing.Point(15, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(226, 211);
+            this.panel1.TabIndex = 0;
+            // 
+            // PictureBoxAvatar
+            // 
+            this.PictureBoxAvatar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PictureBoxAvatar.BackgroundImage = global::GameCaro.Properties.Resources.th4A2MBMRK;
+            this.PictureBoxAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PictureBoxAvatar.Location = new System.Drawing.Point(0, 0);
+            this.PictureBoxAvatar.Name = "PictureBoxAvatar";
+            this.PictureBoxAvatar.Size = new System.Drawing.Size(226, 211);
+            this.PictureBoxAvatar.TabIndex = 0;
+            this.PictureBoxAvatar.TabStop = false;
+            // 
+            // Rule
+            // 
+            this.Rule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Rule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Rule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rule.Location = new System.Drawing.Point(11, 463);
+            this.Rule.Name = "Rule";
+            this.Rule.Size = new System.Drawing.Size(72, 23);
+            this.Rule.TabIndex = 4;
+            this.Rule.Text = "Luật chơi";
+            this.Rule.UseVisualStyleBackColor = false;
+            this.Rule.Click += new System.EventHandler(this.Rule_Click);
+            // 
+            // NewGameButton
+            // 
+            this.NewGameButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.NewGameButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.NewGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewGameButton.Location = new System.Drawing.Point(89, 463);
+            this.NewGameButton.Name = "NewGameButton";
+            this.NewGameButton.Size = new System.Drawing.Size(75, 23);
+            this.NewGameButton.TabIndex = 5;
+            this.NewGameButton.Text = "New Game";
+            this.NewGameButton.UseVisualStyleBackColor = false;
+            this.NewGameButton.Click += new System.EventHandler(this.NewGameButton_Click);
+            // 
+            // QuitButton
+            // 
+            this.QuitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.QuitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.QuitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuitButton.Location = new System.Drawing.Point(170, 463);
+            this.QuitButton.Name = "QuitButton";
+            this.QuitButton.Size = new System.Drawing.Size(75, 23);
+            this.QuitButton.TabIndex = 6;
+            this.QuitButton.Text = "Quit";
+            this.QuitButton.UseVisualStyleBackColor = false;
+            this.QuitButton.Click += new System.EventHandler(this.QuitButton_Click);
+            // 
+            // toolTipNG
+            // 
+            this.toolTipNG.AutoPopDelay = 500;
+            this.toolTipNG.InitialDelay = 500;
+            this.toolTipNG.OwnerDraw = true;
+            this.toolTipNG.ReshowDelay = 100;
+            this.toolTipNG.ShowAlways = true;
+            this.toolTipNG.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipNG.ToolTipTitle = "Ctrl+A";
+            // 
             // PanelChessBoard
             // 
             this.PanelChessBoard.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -175,71 +248,12 @@
             this.PanelChessBoard.Size = new System.Drawing.Size(567, 540);
             this.PanelChessBoard.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.PictureBoxAvatar);
-            this.panel1.Location = new System.Drawing.Point(15, 43);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(226, 211);
-            this.panel1.TabIndex = 0;
-            // 
-            // PictureBoxAvatar
-            // 
-            this.PictureBoxAvatar.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.PictureBoxAvatar.BackgroundImage = global::GameCaro.Properties.Resources.th4A2MBMRK;
-            this.PictureBoxAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PictureBoxAvatar.Location = new System.Drawing.Point(0, 0);
-            this.PictureBoxAvatar.Name = "PictureBoxAvatar";
-            this.PictureBoxAvatar.Size = new System.Drawing.Size(226, 211);
-            this.PictureBoxAvatar.TabIndex = 0;
-            this.PictureBoxAvatar.TabStop = false;
-            // 
-            // Rule
-            // 
-            this.Rule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rule.Location = new System.Drawing.Point(11, 463);
-            this.Rule.Name = "Rule";
-            this.Rule.Size = new System.Drawing.Size(72, 23);
-            this.Rule.TabIndex = 4;
-            this.Rule.Text = "Luật chơi";
-            this.Rule.UseVisualStyleBackColor = true;
-            this.Rule.Click += new System.EventHandler(this.Rule_Click);
-            // 
-            // NewGameButton
-            // 
-            this.NewGameButton.Location = new System.Drawing.Point(89, 463);
-            this.NewGameButton.Name = "NewGameButton";
-            this.NewGameButton.Size = new System.Drawing.Size(75, 23);
-            this.NewGameButton.TabIndex = 5;
-            this.NewGameButton.Text = "New Game";
-            this.NewGameButton.UseVisualStyleBackColor = true;
-            this.NewGameButton.Click += new System.EventHandler(this.NewGameButton_Click);
-            // 
-            // QuitButton
-            // 
-            this.QuitButton.Location = new System.Drawing.Point(170, 463);
-            this.QuitButton.Name = "QuitButton";
-            this.QuitButton.Size = new System.Drawing.Size(75, 23);
-            this.QuitButton.TabIndex = 6;
-            this.QuitButton.Text = "Quit";
-            this.QuitButton.UseVisualStyleBackColor = true;
-            this.QuitButton.Click += new System.EventHandler(this.QuitButton_Click);
-            // 
-            // toolTipNG
-            // 
-            this.toolTipNG.AutoPopDelay = 500;
-            this.toolTipNG.InitialDelay = 500;
-            this.toolTipNG.OwnerDraw = true;
-            this.toolTipNG.ReshowDelay = 100;
-            this.toolTipNG.ShowAlways = true;
-            this.toolTipNG.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTipNG.ToolTipTitle = "Ctrl+A";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(872, 622);
             this.Controls.Add(this.QuitButton);

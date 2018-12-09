@@ -71,6 +71,11 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Rule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,14 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Rule.resx">
       <DependentUpon>Rule.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,25 +126,29 @@
     <None Include="Resources\Capture.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image01.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\th4A2MBMRK.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UndoImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Background1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\BackgroundBoard.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="a.ico" />
+    <None Include="Resources\Background1.jpg" />
+    <None Include="Resources\Background.jpg" />
+    <None Include="Resources\UndoImage1.png" />
+    <None Include="Resources\Mark02.PNG" />
+    <None Include="Resources\Mark01.PNG" />
+    <None Include="Resources\PanelSwap.PNG" />
+    <None Include="Resources\Panelp.PNG" />
+    <None Include="Resources\Panel.PNG" />
+    <None Include="Resources\777.PNG" />
+    <None Include="Resources\555.PNG" />
+    <None Include="Resources\333.PNG" />
+    <None Include="Resources\SizeBackGround.PNG" />
+    <None Include="Resources\Backgroundchange.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

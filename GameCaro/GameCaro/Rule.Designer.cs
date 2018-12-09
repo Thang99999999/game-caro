@@ -68,6 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GameCaro.Properties.Resources.BackgroundBoard;
             this.ClientSize = new System.Drawing.Size(405, 450);
             this.Controls.Add(this.IgnoreButton);
             this.Controls.Add(this.rtbRule);
