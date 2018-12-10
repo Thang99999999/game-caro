@@ -44,7 +44,6 @@
             this.rtbRule.HideSelection = false;
             this.rtbRule.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.rtbRule.Location = new System.Drawing.Point(12, 12);
-            this.rtbRule.Multiline = false;
             this.rtbRule.Name = "rtbRule";
             this.rtbRule.ShowSelectionMargin = true;
             this.rtbRule.Size = new System.Drawing.Size(367, 348);

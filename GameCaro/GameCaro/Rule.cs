@@ -25,9 +25,23 @@ namespace GameCaro
         private void rtbRule_TextChanged(object sender, EventArgs e)
         {
             Size s = new Size();
-            rtbRule.Text = "    LUẬT CHƠI BÀN CỜ " + s.SizeBoard() + "\n";
-            rtbRule.Text += "\nHai người chơi luân phiên đánh dấu \n" + "Người thắng cuộc là người đi đủ "
-                + "nước, tính theo dòng, cột hay đường chéo mà không bị đối thủ chặn sát 2 đầu!";
+         
+            rtbRule.Text = "                                     LUẬT CHƠI BÀN CỜ \n\n ";
+            
+            rtbRule.Text += "* Đối với bàn cờ 3x3 thì người nào đi đủ 3 quân cờ trên 1 đường\n" +
+                "thẳng trước sẻ là người chiến thắng \n";
+            rtbRule.Text += "* Đối với bàn cờ 5x5 thì người nào đi đủ 5 quân cờ trên 1 đường\n" +
+                "thẳng trước sẻ là người chiến thắng \n";
+            rtbRule.Text += "* Đối với những bàn cờ lớn hơn kích thước 7x7 thì ta áp dụng\n" +
+                "thêm luật dù đủ 5 quân cờ trên 1 đường thẳng mà bị chặn 2 đầu\n" +
+                "vẫn chưa tính là thắng cuộc\n";
+            rtbRule.Text += "* Đối với bàn cờ lớn hơn 7x7 thì có lớn hơn 5 quân cờ trên 1 \n" +
+                "đường thẳng dù không bị chặn 2 đầu vẫn không tính là chiến  \n " +
+                "thắng  \n";
+            rtbRule.Text += "* Khi bạn đi nhầm nút bạn có thể nhấn vào undo để đi lại nước \n" +
+                " vừa đánh \n\n";
+            rtbRule.Text += "                         **************** END ***************\n\n";
+            rtbRule.Text += "       ^.^ ********* Chúc các bạn chơi game vui vẻ ********* ^.^";
         }
     }
 }
