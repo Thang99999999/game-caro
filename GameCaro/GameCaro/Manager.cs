@@ -364,9 +364,9 @@ namespace GameCaro
             Point point = GetChess(button);
             bool chan = false;
             int CountTop = 0;
-            for (int i = 0; i <= point.X; i++)
+            for (int i = 0; i <= point.Y; i++)
             {
-                if (point.Y - i < 0 || point.X + i >= Size.ChessBoardWidth)
+                if (point.Y - i < 0 || point.X + i >= Size.ChessBoardWidth+1 )
                     break;
                 if (Matrix[point.Y - i][point.X + i].BackgroundImage == button.BackgroundImage)
                     CountTop++;
@@ -379,7 +379,7 @@ namespace GameCaro
             }
 
             int CountBottom = 0;
-            for (int i = 1; i <= Size.ChessBoardWidth  - point.X; i++)
+            for (int i = 1; i <= Size.ChessBoardWidth +1   - point.X; i++)
             {
                 if (point.Y + i >= Size.ChessBoardHeight || point.X - i < 0)
                     break;
