@@ -35,6 +35,20 @@ namespace GameCaro
             return ChessBoardHeight.ToString() + "x" + ChessBoardWidth.ToString();
         }
 
+        public void LineToWin()
+        {
+            LineWin = (ChessBoardHeight >= ChessBoardWidth) ? ChessBoardWidth : ChessBoardHeight;
+
+            if (LineWin > 5)
+                LineWin = 5;
+            else
+            {
+                if (LineWin < 5)
+                    LineWin = 3;
+                else LineWin = 4;
+            }
+        }
+
         private void OKSizeButton_Click(object sender, EventArgs e)
         {
             int Row = (int)Numrow.Value;
@@ -49,6 +63,8 @@ namespace GameCaro
             ChessHeight = 540 / Max;
             ChessWidth = 540 / Max;
 
+            LineToWin();
+
             ChangeForm();
         }
 
@@ -58,6 +74,7 @@ namespace GameCaro
                  + "x" + ChessBoardWidth.ToString()), "Thông báo!!",
                  MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
+                OKSizeButton.Enabled = false;
                 Form b = new Form1();
                 this.Hide();
                 b.ShowDialog();
@@ -73,6 +90,8 @@ namespace GameCaro
             ChessHeight = 180;
             ChessWidth = 180;
 
+            LineToWin();
+
             ChangeForm();
         }
 
@@ -83,6 +102,8 @@ namespace GameCaro
 
             ChessHeight = 110;
             ChessWidth = 110;
+
+            LineToWin();
 
             ChangeForm();
         }
@@ -95,6 +116,8 @@ namespace GameCaro
             ChessHeight = 80;
             ChessWidth = 80;
 
+            LineToWin();
+
             ChangeForm();
         }
 
@@ -105,7 +128,11 @@ namespace GameCaro
 
         private void Size_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn muốn thoát!!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if(OKSizeButton.Enabled==false)
+            {
+                e.Cancel = false;
+            }
+            else if (MessageBox.Show("Bạn có chắc chắn muốn thoát!!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }

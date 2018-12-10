@@ -97,9 +97,9 @@
             // 
             this.PictureBoxPlayer.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PictureBoxPlayer.Location = new System.Drawing.Point(3, 36);
+            this.PictureBoxPlayer.Location = new System.Drawing.Point(26, 45);
             this.PictureBoxPlayer.Name = "PictureBoxPlayer";
-            this.PictureBoxPlayer.Size = new System.Drawing.Size(110, 104);
+            this.PictureBoxPlayer.Size = new System.Drawing.Size(83, 86);
             this.PictureBoxPlayer.TabIndex = 5;
             this.PictureBoxPlayer.TabStop = false;
             // 
@@ -108,7 +108,7 @@
             this.TextBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TextBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.TextBoxName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TextBoxName.Location = new System.Drawing.Point(26, 7);
+            this.TextBoxName.Location = new System.Drawing.Point(35, 17);
             this.TextBoxName.Name = "TextBoxName";
             this.TextBoxName.ReadOnly = true;
             this.TextBoxName.Size = new System.Drawing.Size(68, 22);
@@ -140,7 +140,7 @@
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
             this.newGameToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -148,7 +148,7 @@
             // 
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.undoToolStripMenuItem.Text = "Undo";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
@@ -156,7 +156,7 @@
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -164,7 +164,7 @@
             // 
             this.sizeBoardToolStripMenuItem.Name = "sizeBoardToolStripMenuItem";
             this.sizeBoardToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.sizeBoardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sizeBoardToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.sizeBoardToolStripMenuItem.Text = "SizeBoard";
             this.sizeBoardToolStripMenuItem.Click += new System.EventHandler(this.sizeBoardToolStripMenuItem_Click);
             // 
@@ -269,8 +269,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Game Caro";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.panel2.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);            this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPlayer)).EndInit();
             this.menuStrip1.ResumeLayout(false);
