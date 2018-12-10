@@ -110,8 +110,8 @@ namespace GameCaro
 
             this.Player = new List<Player>()
             {
-                new Player("Player01",Image.FromFile(Application.StartupPath + "\\Resources\\Capture 02.PNG")),
-                new Player("Player02",Image.FromFile(Application.StartupPath + "\\Resources\\Capture.PNG"))
+                new Player("Player01",Image.FromFile(Application.StartupPath + "\\Resources\\x1.PNG")),
+                new Player("Player02",Image.FromFile(Application.StartupPath + "\\Resources\\x2.PNG"))
             };
         }
         #endregion
@@ -401,7 +401,6 @@ namespace GameCaro
         private void Mark(Button button)
         {
             button.BackgroundImage = Player[CurrentPlayer].Mark;
-
         }
 
 

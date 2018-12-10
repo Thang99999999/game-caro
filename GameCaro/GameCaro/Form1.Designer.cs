@@ -72,11 +72,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Broadway", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(155, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 14);
+            this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Undo";
             // 
@@ -96,10 +96,10 @@
             // PictureBoxPlayer
             // 
             this.PictureBoxPlayer.BackColor = System.Drawing.SystemColors.Control;
-            this.PictureBoxPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PictureBoxPlayer.Location = new System.Drawing.Point(3, 33);
+            this.PictureBoxPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PictureBoxPlayer.Location = new System.Drawing.Point(3, 36);
             this.PictureBoxPlayer.Name = "PictureBoxPlayer";
-            this.PictureBoxPlayer.Size = new System.Drawing.Size(105, 104);
+            this.PictureBoxPlayer.Size = new System.Drawing.Size(110, 104);
             this.PictureBoxPlayer.TabIndex = 5;
             this.PictureBoxPlayer.TabStop = false;
             // 
@@ -139,8 +139,8 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.newGameToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -148,7 +148,7 @@
             // 
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.undoToolStripMenuItem.Text = "Undo";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
@@ -156,15 +156,16 @@
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // sizeBoardToolStripMenuItem
             // 
             this.sizeBoardToolStripMenuItem.Name = "sizeBoardToolStripMenuItem";
-            this.sizeBoardToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.sizeBoardToolStripMenuItem.Text = "SizeBoard          Ctrl+S";
+            this.sizeBoardToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.sizeBoardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sizeBoardToolStripMenuItem.Text = "SizeBoard";
             this.sizeBoardToolStripMenuItem.Click += new System.EventHandler(this.sizeBoardToolStripMenuItem_Click);
             // 
             // panel1
@@ -241,7 +242,7 @@
             this.PanelChessBoard.BackColor = System.Drawing.SystemColors.Control;
             this.PanelChessBoard.BackgroundImage = global::GameCaro.Properties.Resources.BackgroundBoard;
             this.PanelChessBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelChessBoard.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelChessBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelChessBoard.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.PanelChessBoard.Location = new System.Drawing.Point(269, 43);
             this.PanelChessBoard.Name = "PanelChessBoard";
@@ -283,7 +284,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox PictureBoxPlayer;
         private System.Windows.Forms.Button UndoButton;
         private System.Windows.Forms.TextBox TextBoxName;
         private System.Windows.Forms.Panel PanelChessBoard;
@@ -300,6 +300,7 @@
         private System.Windows.Forms.Button QuitButton;
         private System.Windows.Forms.ToolTip toolTipNG;
         private System.Windows.Forms.ToolStripMenuItem sizeBoardToolStripMenuItem;
+        private System.Windows.Forms.PictureBox PictureBoxPlayer;
     }
 }
 

@@ -51,3 +51,16 @@ C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.pdb
 C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Background.resources
 C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Rule.resources
 C:\Users\tuong be de\Desktop\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Size.resources
+D:\game-caro\GameCaro\GameCaro\bin\Debug\GameCaro.exe.config
+D:\game-caro\GameCaro\GameCaro\bin\Debug\GameCaro.exe
+D:\game-caro\GameCaro\GameCaro\bin\Debug\GameCaro.pdb
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.csprojAssemblyReference.cache
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Form1.resources
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Background.resources
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Properties.Resources.resources
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Rule.resources
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.Size.resources
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.GenerateResource.cache
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.CoreCompileInputs.cache
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.exe
+D:\game-caro\GameCaro\GameCaro\obj\Debug\GameCaro.pdb
