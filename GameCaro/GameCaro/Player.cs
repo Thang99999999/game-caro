@@ -30,10 +30,5 @@ namespace GameCaro
             this.Name = name;
             this.Mark = mark;
         }
-
-        public string ToString()
-        {
-            return name;
-        }
     }
 }

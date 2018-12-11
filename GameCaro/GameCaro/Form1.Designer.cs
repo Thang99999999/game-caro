@@ -242,13 +242,13 @@
             this.PanelChessBoard.BackColor = System.Drawing.SystemColors.Control;
             this.PanelChessBoard.BackgroundImage = global::GameCaro.Properties.Resources.BackgroundBoard;
             this.PanelChessBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelChessBoard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelChessBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelChessBoard.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.PanelChessBoard.Location = new System.Drawing.Point(269, 43);
             this.PanelChessBoard.Name = "PanelChessBoard";
             this.PanelChessBoard.Size = new System.Drawing.Size(567, 540);
-            this.PanelChessBoard.TabIndex = 2;
-            // 
+            this.PanelChessBoard.TabIndex = 2;            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

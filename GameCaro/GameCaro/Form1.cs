@@ -16,12 +16,16 @@ namespace GameCaro
     {
         #region Properties
         Manager ChessBoard;
+
+        static public int BoolUndo = 0;
+
         #endregion
         public Form1()
         {
             InitializeComponent();
             ChessBoard = new Manager(PanelChessBoard,TextBoxName,PictureBoxPlayer);
             ChessBoard.EndedGame += ChessBoard_EndedGame;
+            ChessBoard.UndoClick += ChessBoard_UndoClick;
             ChessBoard.SizePanel();
             ChessBoard.LocationPanel();
             ChessBoard.DrawPanelChessBoard();
@@ -32,6 +36,20 @@ namespace GameCaro
             tip.SetToolTip(NewGameButton, "Ctrl+A");
             tip.SetToolTip(QuitButton, "Ctrl+Q");
             tip.SetToolTip(UndoButton, "Ctrl+U");
+        }
+
+        private void ChessBoard_UndoClick(object sender, EventArgs e)
+        {
+            EnableUndo();
+        }
+
+        void EnableUndo()
+        {
+            if (BoolUndo >= 2)
+            {
+                UndoButton.Enabled = true;
+                undoToolStripMenuItem.Enabled = true;
+            }
         }
 
         void NewGame()
@@ -96,6 +114,13 @@ namespace GameCaro
         private void UndoButton_Click(object sender, EventArgs e)
         {
             Undo();
+
+            BoolUndo = 0;
+
+            UndoButton.Enabled = false;
+
+            undoToolStripMenuItem.Enabled = false;
+
         }
 
         private void Rule_Click(object sender, EventArgs e)
@@ -132,7 +157,5 @@ namespace GameCaro
                 Application.Exit();
             }
         }
-
-       
     }
 }

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -84,7 +85,6 @@ namespace GameCaro
             get { return panelHeight; }
         }
 
-
         private event EventHandler endedGame;
         public event EventHandler EndedGame
         {
@@ -97,6 +97,21 @@ namespace GameCaro
                 endedGame -= value;
             }
         }
+
+        private event EventHandler undoClick;
+        public event EventHandler UndoClick
+        {
+            add
+            {
+                undoClick += value;
+            }
+            remove
+            {
+                undoClick -= value;
+            }
+        }
+
+
 
 
         #endregion
@@ -182,6 +197,16 @@ namespace GameCaro
                  MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             ChangePlayer();
+
+            Form1.BoolUndo++;
+
+            EnableUndo();
+        }
+
+        public void EnableUndo()
+        {
+            if (undoClick != null)
+                undoClick(this, new EventArgs());
         }
 
         public bool Undo()
@@ -196,6 +221,17 @@ namespace GameCaro
             Button button = Matrix[OldPoint.Point.Y][OldPoint.Point.X];
 
             button.BackgroundImage = null;
+
+            for (int i = 0; i < 10; i++)
+            {
+                button.BackColor = Color.Red;
+                Thread.Sleep(40);
+                Application.DoEvents();
+                button.BackColor = Color.Empty;
+            }
+            
+
+            
             
             if (TimeLineStack.Count == 0)
             {                    
@@ -209,6 +245,8 @@ namespace GameCaro
 
             ChangePlayer();
 
+            Form1.BoolUndo++;
+             
             return true;
         }
 
@@ -394,6 +432,10 @@ namespace GameCaro
                     }
                     break;
                 }
+            }
+            if(CountBottom+CountTop==Size.LineWin)
+            {
+                
             }
             return CountTop + CountBottom == Size.LineWin;
         }
