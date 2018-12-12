@@ -66,10 +66,13 @@ namespace GameCaro
             UndoButton.Enabled = false;
         }
 
-        void Undo()
+        bool Undo()
         {
-            ChessBoard.Undo();
+            if (ChessBoard.Undo() == true)
+                return true;
+            return false;
         }
+
         void Quit()
         {
             Application.Exit();
@@ -113,13 +116,14 @@ namespace GameCaro
 
         private void UndoButton_Click(object sender, EventArgs e)
         {
-            Undo();
-
-            BoolUndo = 0;
-
             UndoButton.Enabled = false;
 
             undoToolStripMenuItem.Enabled = false;
+            if (Undo() == false)
+            {
+                return;
+            }
+            BoolUndo = 0;
 
         }
 

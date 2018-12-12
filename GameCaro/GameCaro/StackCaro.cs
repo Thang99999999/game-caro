@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GameCaro
 {
@@ -10,66 +11,26 @@ namespace GameCaro
     {
         int top;
         LinkedListCaro<T> list;
-
-        public StackCaro()
-        {
+        public StackCaro() {
             list = new LinkedListCaro<T>();
             top = -1;
         }
-
-        public void Push(T item)
-        {
-            list.Add(item);
+        public void Push(T item){
+            if (list.Add(item) == 0) {
+                MessageBox.Show("Lỗi bộ nhớ!", "Thông báo!!", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                top--;
+            }
             ++top;
         }
-
-        public T Pop()
-        {
+        public T Pop()  {
             T item = list.Head.Info;
             list.Remove();
             --top;
             return item;
-        }
-
-        public T Top()
-        {
+        }     public T Top()  {
             return list.Head.Info;
         }
-
-        public int Count
-        {
-            get { return top + 1; }
-        }
-    }
-
-    public class LinkedListCaro<T>
-    {
-
-        public class Node
-        {
-            public Node next;
-            public T Info;
-        }
-
-        public Node Head;
-
-        public LinkedListCaro()
-        {
-            Head = new Node();
-            Head.Info = default(T);
-        }
-        public void Add(T item)
-        {
-            Node temp = new Node();
-            temp.Info = item;
-
-            temp.next = Head;
-            Head = temp;
-        }
-
-        public void Remove()
-        {
-            Head = Head.next;
-        }
+        public int Count   {  get { return top + 1; } }
     }
 }

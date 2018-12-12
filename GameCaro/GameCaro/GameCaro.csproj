@@ -67,6 +67,7 @@
       <DependentUpon>FormBackground.cs</DependentUpon>
     </Compile>
     <Compile Include="InfoPlayer.cs" />
+    <Compile Include="LinkedListCaro.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
