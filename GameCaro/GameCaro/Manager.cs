@@ -190,6 +190,7 @@ namespace GameCaro
             {
                 EndGame();
                 ChessBoard.Enabled = false;
+                return;
             }
             else if(TimeLineStack.Count==Size.ChessBoardWidth*Size.ChessBoardHeight)
             {
@@ -253,7 +254,7 @@ namespace GameCaro
 
         public void LocationPanel()
         {
-            ChessBoard.Location = new Point(285, 40);
+            ChessBoard.Location = new Point(276, 40);
         }
 
         public void EndGame()

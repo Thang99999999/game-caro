@@ -60,26 +60,12 @@ namespace GameCaro
             int Max;
             Max = (Row >= Col) ? Row : Col;
 
-            ChessHeight = 540 / Max;
-            ChessWidth = 540 / Max;
+            ChessHeight = 560/ Max;
+            ChessWidth = 560 / Max;
 
             LineToWin();
 
             ChangeForm();
-        }
-
-        public void ChangeForm()
-        {
-            if (MessageBox.Show(("Tạo bàn cờ với kích thước " + ChessBoardHeight.ToString()
-                 + "x" + ChessBoardWidth.ToString()), "Thông báo!!",
-                 MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
-            {
-                OKSizeButton.Enabled = false;
-                Form b = new Form1();
-                this.Hide();
-                b.ShowDialog();
-                Application.Exit();
-            }
         }
 
         private void Button33_Click(object sender, EventArgs e)
@@ -87,8 +73,8 @@ namespace GameCaro
             ChessBoardHeight = 3;
             ChessBoardWidth = 3;
 
-            ChessHeight = 180;
-            ChessWidth = 180;
+            ChessHeight = 185;
+            ChessWidth = 185;
 
             LineToWin();
 
@@ -100,8 +86,8 @@ namespace GameCaro
             ChessBoardHeight = 5;
             ChessBoardWidth = 5;
 
-            ChessHeight = 110;
-            ChessWidth = 110;
+            ChessHeight = 115;
+            ChessWidth = 115;
 
             LineToWin();
 
@@ -128,14 +114,30 @@ namespace GameCaro
 
         private void Size_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(OKSizeButton.Enabled==false)
+            if (OKSizeButton.Enabled == false)
             {
                 e.Cancel = false;
             }
-            else if (MessageBox.Show("Bạn có chắc chắn muốn thoát!!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            else if (MessageBox.Show("Bạn có chắc chắn muốn thoát!!", "Thông báo", MessageBoxButtons.OKCancel, 
+                MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
+        }
+
+        public void ChangeForm()
+        {
+            if (MessageBox.Show(("Tạo bàn cờ với kích thước " + ChessBoardHeight.ToString()
+                 + "x" + ChessBoardWidth.ToString()), "Thông báo!!",
+                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                OKSizeButton.Enabled = false;
+                Form b = new Form1();
+                this.Hide();
+                b.ShowDialog();
+                Application.Exit();
+            }
+
         }
     }
     
